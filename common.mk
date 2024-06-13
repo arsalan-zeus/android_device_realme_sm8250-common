@@ -30,7 +30,8 @@ PRODUCT_PACKAGES += \
     android.hardware.audio@6.0-impl \
     android.hardware.audio.effect@6.0-impl \
     android.hardware.bluetooth.audio-impl \
-    android.hardware.soundtrigger@2.3-impl
+    android.hardware.soundtrigger@2.3-impl \
+    libaudioroute.vendor
 
 PRODUCT_PACKAGES += \
     audio.bluetooth.default \
@@ -120,6 +121,8 @@ TARGET_SCREEN_HEIGHT := 2400
 
 # Camera
 PRODUCT_PACKAGES += \
+    libutilscallstack.vendor \
+    android.hardware.camera.device@3.6.vendor \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service_64 \
     libcamera_metadata_shim \
@@ -128,7 +131,9 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libcamera2ndk_vendor \
-    libstdc++.vendor
+    libstdc++.vendor \
+    libpng.vendor \
+    liblz4.vendor
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.camera.flash-autofocus.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.camera.flash-autofocus.xml \
@@ -306,7 +311,8 @@ PRODUCT_PACKAGES += \
 # Net
 PRODUCT_PACKAGES += \
     android.system.net.netd@1.1.vendor \
-    netutils-wrapper-1.0
+    netutils-wrapper-1.0 \
+    libnetutils.vendor
 
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.ipsec_tunnels.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.ipsec_tunnels.xml
@@ -382,6 +388,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.power-service.oplus-libperfmgr
 
+PRODUCT_PACKAGES += \
+    libssl.vendor
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/power/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json \
     $(LOCAL_PATH)/configs/power/powerhint.xml:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.xml
@@ -394,11 +403,15 @@ PRODUCT_PACKAGES += \
 
 # QMI
 PRODUCT_PACKAGES += \
+    libcurl.vendor \
     libjson \
     libqti_vndfwk_detect \
     libqti_vndfwk_detect.vendor \
     libvndfwk_detect_jni.qti \
-    libvndfwk_detect_jni.qti.vendor
+    libvndfwk_detect_jni.qti.vendor \
+    libjsoncpp.vendor \
+    libsqlite.vendor
+
 
 # RIL
 PRODUCT_PACKAGES += \
