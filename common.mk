@@ -65,7 +65,7 @@ PRODUCT_PACKAGES += \
     libvolumelistener
 
 PRODUCT_PACKAGES += \
-    DolbyManager
+    OplusDolby
 
 AUDIO_HAL_DIR := hardware/qcom-caf/sm8250/audio
 
@@ -434,7 +434,8 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_PACKAGES += \
     libsensorndkbridge \
-    sensors.oplus
+    sensors.oplus \
+    libdumpstateutil.vendor
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf
