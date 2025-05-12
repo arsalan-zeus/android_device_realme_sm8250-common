@@ -273,6 +273,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.light-service.oplus
 # Lineage Health
+$(call soong_config_set,lineage_health,charging_control_charging_path,/sys/devices/virtual/oplus_chg/battery/mmi_charging_enable)
+$(call soong_config_set,lineage_health,charging_control_supports_bypass,false)
+
 PRODUCT_PACKAGES += \
     vendor.lineage.health-service.default
 
