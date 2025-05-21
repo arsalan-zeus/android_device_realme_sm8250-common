@@ -63,9 +63,6 @@ PRODUCT_PACKAGES += \
     libvisualizer \
     libvolumelistener
 
-PRODUCT_PACKAGES += \
-    DolbyManager
-
 AUDIO_HAL_DIR := hardware/qcom-caf/sm8250/audio
 
 PRODUCT_COPY_FILES += \
@@ -330,7 +327,6 @@ PRODUCT_PACKAGES += \
     android.hardware.secure_element@1.2.vendor
 
 PRODUCT_PACKAGES += \
-    NfcNci \
     Tag \
     com.android.nfc_extras
 
@@ -564,6 +560,3 @@ PRODUCT_PACKAGES += \
     android.media.audio.common.types-V2-cpp \
     libnl \
     libwfdaac_vendor
-
-PRODUCT_BOOT_JARS += \
-    WfdCommon
