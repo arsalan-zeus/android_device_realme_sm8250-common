@@ -17,3 +17,7 @@
     <!-- Whether to show min refresh rate in display settings -->
     <bool name="config_show_min_refresh_rate_switch">true</bool>
 </resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- Android version screen, build maintainer -->
+    <string name="matrixx_maintainer">Arsalan-Zeus</string>
+</resources>
